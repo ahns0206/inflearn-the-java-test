@@ -50,8 +50,8 @@ class StudyServiceTest {
 
     @Test
     void createNewStudy() {
-        System.out.println("========");
-        System.out.println(port);
+        log.debug("========");
+        log.debug(String.valueOf(port));
 
         // Given
         StudyService studyService = new StudyService(memberService, studyRepository);

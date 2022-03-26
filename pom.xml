@@ -90,9 +90,10 @@
         </plugins>
     </build>
 
+    <!-- profile에 따라 tag 지정-->
     <profiles>
         <profile>
-            <id>default</id>
+            <id>default</id> <!-- 프로파일 설정 안한 경우 -->
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -113,6 +114,9 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <groups>fast | slow</groups>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
